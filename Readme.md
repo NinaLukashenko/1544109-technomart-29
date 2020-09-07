@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Нина Лукашенко](https://up.htmlacademy.ru/htmlcss/29/user/1544109).
-* Наставник: `Неизвестно`.
+* Наставник: [Михаил Поданев](https://htmlacademy.ru/profile/mpodanev).
 
 ---
 
