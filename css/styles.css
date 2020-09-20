@@ -1,0 +1,540 @@
+/* Fonts */
+/* cuprum-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Cuprum';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cuprum Regular'), local('Cuprum-Regular'),
+    url('../fonts/cuprum-v12-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/cuprum-v12-latin_cyrillic-regular.woff') format('woff'); /* Modern Browsers */
+  font-display: swap;
+}
+
+/* cuprum-italic - latin_cyrillic */
+@font-face {
+  font-family: 'Cuprum';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Cuprum Italic'), local('Cuprum-Italic'),
+    url('../fonts/cuprum-v12-latin_cyrillic-italic.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/cuprum-v12-latin_cyrillic-italic.woff') format('woff'); /* Modern Browsers */
+  font-display: swap;
+}
+
+/* cuprum-700 - latin_cyrillic */
+@font-face {
+  font-family: 'Cuprum';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Cuprum Bold'), local('Cuprum-Bold'),
+    url('../fonts/cuprum-v12-latin_cyrillic-700.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/cuprum-v12-latin_cyrillic-700.woff') format('woff'); /* Modern Browsers */
+  font-display: swap;
+}
+
+/* cuprum-700italic - latin_cyrillic */
+@font-face {
+  font-family: 'Cuprum';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Cuprum Bold Italic'), local('Cuprum-BoldItalic'),
+    url('../fonts/cuprum-v12-latin_cyrillic-700italic.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/cuprum-v12-latin_cyrillic-700italic.woff') format('woff'); /* Modern Browsers */
+  font-display: swap;
+}
+
+/* pt-sans-regular - latin_cyrillic */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans'), local('PTSans-Regular'),
+    url('../fonts/pt-sans-v12-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/pt-sans-v12-latin_cyrillic-regular.woff') format('woff'); /* Modern Browsers */
+  font-display: swap;
+}
+
+/* pt-sans-700 - latin_cyrillic */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Sans Bold'), local('PTSans-Bold'),
+    url('../fonts/pt-sans-v12-latin_cyrillic-700.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/pt-sans-v12-latin_cyrillic-700.woff') format('woff'); /* Modern Browsers */
+  font-display: swap;
+}
+
+/* Variables */
+:root {
+  /* По всему сайту */
+  --light-background: #f9f5f0;
+  --dark-blue-background: #293449;
+  --dark-text: #32425c;
+
+  --white: #ffffff;
+  --black: #000000;
+  --basic-red: #ee3643;
+  --basic-yellow: #ffd180;
+  --basic-grey: #c5c5c5;
+  --basic-light-grey: #f1f5f7;
+  --basic-dark-grey: #a9a9a9;
+  --basic-blue: #32425c;
+  --basic--green: #63a63e;
+  --white-transparent-3: rgba(255, 255, 255, 0.3);
+  --white-transparent-5: rgba(255, 255, 255, 0.5);
+  --basic-grey-transparent-3: rgba(197, 197, 197, 0.3);
+  --basic-dark-grey-transparent-3: rgb(169, 169, 169, 0.3);
+
+  /* Секция Преимущества */
+  --basic-yellow: #ffd180;
+  --dark-yellow-background: #ffc047;
+  --blue-background: #3bbce3;
+  --purple-background: #dc91d8;
+  --light-green-background: #8ed78f;
+
+  /* секция Галерея */
+  --light-grey-background:rgba(0, 0, 0, 0.25);
+
+  /* Взаимодействие с пользователем */
+  --basic-blue-hover: #293449;
+  --basic-blue-clicked: #1d2739;
+  --basic-red-hover: #ca2c37;
+  --basic-red-clicked: #ba2732;
+  --basic-light-grey-clicked: rgba(241, 245, 247, 0.5);
+  --basic-yellow-clicked: rgba(255, 209, 128, 0.5);
+  --basic--green-hover: #5fbb2d;
+  --dark-blue-clicked: #161d29;
+}
+
+.page-body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--black);
+  background-color: var(--white);
+}
+
+.page-body a {
+  text-decoration: none;
+}
+
+.page-body img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Шапка сайта */
+.top-header {
+  background-color: var(--basic-blue);
+}
+
+.top-actions input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.top-actions input:focus {
+  background-color: var(--white);
+}
+
+.top-actions input::placeholder {
+  color: var(--white);
+}
+
+.top-actions input:focus input::placeholder {
+  color: var(--black);
+}
+
+.top-actions a {
+  color: var(--white);
+}
+
+.user-menu-list {
+  list-style: none;
+}
+
+.user-menu-item a:focus {
+  color: var(--white-transparent-5);
+}
+
+.bookmarks a:focus {
+  background-color: var(--dark-blue-clicked);
+}
+
+.make-order a{
+  background-color: var(--basic--green);
+}
+
+.make-order a:hover {
+  background-color: var(--basic--green-hover);
+}
+
+.bottom-header {
+  background-color: var(--basic-light-grey);
+}
+
+.bottom-header-text {
+  font-style: italic;
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--basic-red);
+}
+
+.bottom-header-phone {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--basic-red);
+}
+
+.bottom-header-adress {
+  color: var(--basic-blue);
+}
+
+.user-link {
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
+  color: inherit;
+  background-color: var(--white);
+}
+
+.user-link:hover {
+  color: var(--basic-red);
+}
+
+.user-link:focus {
+  color: var(--basic-grey);
+}
+
+
+/* Главная навигация */
+.main-navigation {
+  color: var(--white);
+  background-color: var(--basic-blue);
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a {
+  color: var(--white);
+}
+
+.site-navigation a:hover {
+  background-color: var(--basic-blue-hover);
+}
+
+.site-navigation a:focus {
+  color: var(--white-transparent-5);
+  background-color: var(--basic-blue-clicked);
+}
+
+/* Преимущества */
+.benefits-list {
+  list-style: none;
+}
+
+.benefits-item h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--white);
+}
+
+.benefits-item a {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white);
+  background-color: var(--white-transparent-3);
+}
+
+.benefits-item .benefit-sales:hover {
+  background-color: var(--basic-grey-transparent-3);
+}
+
+.benefits-item .benefit-sales:focus {
+  background-color: var(--basic-dark-grey-transparent-3);
+}
+
+.materials {
+  background-color: var(--basic-yellow);
+}
+
+.tool {
+  background-color: var(--blue-background);
+}
+
+.equipment {
+  background-color: var(--purple-background);
+}
+
+.sales {
+  background-color: var(--light-green-background);
+}
+
+.delivery {
+  background-color: var(--dark-yellow-background);
+}
+
+/* Галерея */
+.gallery-item {
+  list-style: none;
+}
+
+.gallery-text-wrapper {
+  background-color: var(--light-grey-background);
+}
+
+.gallery-item h3 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+  color: var(--white);
+}
+
+.gallery-item p {
+  color: var(--white);
+}
+
+/* Кнопки */
+.button {
+  font-size: inherit;
+  line-height: 18px;
+  text-align: center;
+  color: var(--white);
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: var(--basic-red);
+  border: none;
+}
+
+.button:hover {
+  background-color: var(--basic-red-hover);
+}
+
+.button:focus,
+.button:active {
+  background-color: var(--basic-red-clicked);
+}
+
+.gallery-button.disabled,
+.gallery-button:disabled {
+  cursor: default;
+  opacity: 0.5;
+  background-color: var(--white);
+}
+
+/* Популярные (Товары & Производители) */
+
+.populars h2 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-blue);
+}
+
+/* Популярные товары */
+.popular-goods-head {
+  border-color: var(--light-background);
+}
+
+.popular-goods-item {
+  font-family: "PT Sans", Arial, sans-serif;
+}
+
+.popular-goods-list {
+  list-style: none;
+}
+
+.popular-goods-item a {
+  color: inherit;
+}
+
+.popular-goods-item h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.popular-goods-old-price {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-decoration-line: line-through;
+  text-align: center;
+  color: var(--basic-dark-grey);
+}
+
+/* Популярные производители */
+.popular-producers-list {
+  list-style: none;
+}
+
+/* Сервисы */
+.services {
+  background-color: var(--basic-light-grey);
+}
+
+.services h2 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.services p {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+}
+
+.services-list-toggles {
+  list-style: none;
+}
+
+.services-list {
+  list-style: none;
+}
+
+.services-item h3 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-blue);
+}
+
+.services-button {
+  background-color: var(--basic-blue);
+  color: var(--white);
+}
+
+.services-button:hover:not(.services-button-active) {
+  background-color: var(--dark-blue-background);
+}
+
+.services-button-active {
+  background-color: var(--white);
+  color: var(--basic-blue);
+}
+
+/* Компания Техномарт */
+.index-columns h2 {
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.index-columns p {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+}
+
+.transport-partners-list {
+  list-style: none;
+}
+
+.transport-partners-item {
+  font-size: 18px;
+}
+
+
+/* Подвал */
+.top-footer {
+  background-color: var(--basic-blue);
+}
+
+.footer-site-navigation {
+  color: var(--basic-light-grey);
+  list-style: none;
+}
+
+.footer-site-navigation a {
+  color: inherit;
+}
+
+.footer-site-navigation a:hover {
+  text-decoration: underline;
+}
+
+.footer-site-navigation a:focus {
+  color: var(--basic-light-grey-clicked);
+}
+
+.footer-contacts {
+  color: var(--white);
+}
+
+.footer-phone {
+  color: inherit;
+}
+
+.footer-extra-navigation {
+  color: var(--basic-yellow);
+  list-style: none;
+}
+
+.footer-extra-navigation a {
+  color: inherit;
+}
+
+.footer-extra-navigation a:hover {
+  text-decoration: underline;
+}
+
+.footer-extra-navigation a:focus {
+  color: var(--basic-yellow-clicked);
+}
+
+.bottom-footer {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--white);
+  background-color: var(--dark-blue-background);
+}
+
+.social-list {
+  list-style: none;
+}
+
+.social-button {
+  color: inherit;
+  background: linear-gradient(0deg, #212A3A, #212A3A);
+}
+
+.social-button:hover,
+.social-button:focus {
+  background: none;
+  background-color: var(--basic-red);
+}
+
+.footer-feedback a {
+  color: var(--basic-yellow);
+}
+
+.footer-feedback a:hover {
+  text-decoration: underline;
+}
+
+.footer-feedback a:focus {
+  color: var(--basic-red);
+}
+
+.footer-copyright a {
+  color: var(--basic-yellow);
+}
+
+.footer-copyright a:hover {
+  text-decoration: underline;
+}
+
+.footer-copyright a:focus {
+  color: var(--basic-red);
+}
