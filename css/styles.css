@@ -68,9 +68,11 @@
 /* Variables */
 :root {
   /* По всему сайту */
-  --light-background: #f9f5f0;
+  --lighten-background: #f9f5f0;
+  --light-background: #f7f3ec;
   --dark-blue-background: #293449;
   --dark-text: #32425c;
+  --grey-border: #e5e5e5;
 
   --white: #ffffff;
   --black: #000000;
@@ -83,6 +85,7 @@
   --basic--green: #63a63e;
   --white-transparent-3: rgba(255, 255, 255, 0.3);
   --white-transparent-5: rgba(255, 255, 255, 0.5);
+  --black-transparent-3: rgba(0, 0, 0, 0.3);
   --basic-grey-transparent-3: rgba(197, 197, 197, 0.3);
   --basic-dark-grey-transparent-3: rgb(169, 169, 169, 0.3);
 
@@ -261,11 +264,11 @@
   background-color: var(--white-transparent-3);
 }
 
-.benefits-item .benefit-sales:hover {
+.benefits-item .benefit-link:hover {
   background-color: var(--basic-grey-transparent-3);
 }
 
-.benefits-item .benefit-sales:focus {
+.benefits-item .benefit-link:focus {
   background-color: var(--basic-dark-grey-transparent-3);
 }
 
@@ -311,7 +314,8 @@
 
 /* Кнопки */
 .button {
-  font-size: inherit;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
   line-height: 18px;
   text-align: center;
   color: var(--white);
@@ -348,33 +352,34 @@
 
 /* Популярные товары */
 .popular-goods-head {
-  border-color: var(--light-background);
+  border-color: var(--lighten-background);
 }
 
-.popular-goods-item {
+.catalog-item {
   font-family: "PT Sans", Arial, sans-serif;
 }
 
-.popular-goods-list {
+.catalog-list {
   list-style: none;
 }
 
-.popular-goods-item a {
+.catalog-item a {
   color: inherit;
 }
 
-.popular-goods-item a.button-good {
+.catalog-item a.catalog-price {
   color: var(--white);
 }
 
-.popular-goods-item h3 {
+.catalog-item h3 {
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
   text-align: center;
 }
 
-.popular-goods-old-price {
+.catalog-old-price {
+  font-family: "PT Sans", Arial, sans-serif;
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
@@ -549,4 +554,212 @@
 
 .footer-copyright a:focus {
   color: var(--basic-red);
+}
+
+/* Страница КАТАЛОГ */
+/* Шапка */
+.cart-not-empty a {
+  background-color: var(--basic-red);
+  color: var(--white);
+}
+
+.user-actions {
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
+  color: inherit;
+  background-color: var(--white);
+}
+
+.user-page {
+  color: inherit;
+}
+
+.user-page:focus,
+.user-page:active{
+  color: var(--basic-grey);
+}
+
+.logout-link {
+  color: var(--basic-grey);;
+}
+
+.logout-link:hover {
+  color: var(--basic-blue);;
+}
+
+.logout-link:focus,
+.logout-link:active {
+  color: var(--basic-grey);;
+}
+
+.user-options {
+  list-style: none;
+}
+
+.user-options a {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-blue);
+}
+
+.user-options a:hover {
+  color: var(--basic-red);
+}
+
+.user-options a:focus,
+.user-options a:active {
+  color: var(--basic-grey);
+}
+
+/* Каталог */
+.catalog-page {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.catalog-title {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-blue);
+  background-color: var(--basic-light-grey);
+}
+
+/* Хлебные крошки */
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a {
+  color: inherit;
+  text-transform: uppercase;
+}
+
+/* Фильтра */
+.filter-title {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  background-color: var(--light-background);
+  text-transform: uppercase;
+}
+
+.filter legend {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.filter ul {
+  list-style: none;
+  font-size: 15px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+.button-pale {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--black);
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: var(--white);
+  border: 1px solid var(--grey-border);
+}
+
+.button-pale:hover {
+  border: 1px solid var(--basic-grey);
+}
+
+.button-pale:focus,
+.button-pale:active {
+  border: 1px solid var(--basic-red);
+  outline: none;
+}
+
+/* Сортировка */
+.sort {
+  background-color: var(--light-background);
+}
+
+.sort-title {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.sort ul {
+  list-style: none;
+  text-transform: uppercase;
+  color: var(--black-transparent-3);
+}
+
+.sort-option label {
+  border-bottom: 1px dotted var(--basic-red);
+}
+
+.sort-option:hover label {
+  color: var(--black);
+  border-bottom-style: solid;
+}
+
+.sort-option input:checked + label {
+  border-bottom: none;
+  color: var(--basic-red);
+}
+
+/* Пагинация */
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-item a {
+  text-align: center;
+  color: var(--black);
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: var(--white);
+  border: 1px solid var(--grey-border);
+}
+
+.pagination-item a:hover {
+  border: 1px solid var(--basic-grey);
+}
+
+.pagination-item a:focus,
+.pagination-item a:active {
+  border: 1px solid var(--basic-red);
+}
+
+.pagination-item-current a,
+.pagination-item-current a:hover,
+.pagination-item-current a:focus,
+.pagination-item-current a:active {
+  color: var(--white);
+  background-color: var(--basic-red);
+  border: 1px solid var(--basic-red);
+}
+
+/* О группе товаров */
+.about-goods {
+  background-color: var(--basic-light-grey);
+}
+
+.about-goods-title {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.about-goods-info {
+  line-height: 24px;
 }
