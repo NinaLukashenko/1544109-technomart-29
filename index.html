@@ -22,7 +22,7 @@
             </a>
           </div>
           <div class="top-actions">
-            <input type="text" name="search" placeholder="Поиск:">
+            <input class="search" type="text" name="search" placeholder="Поиск:">
             <ul class="user-menu-list">
               <li class="user-menu-item bookmarks"><a href="#">Закладки: 0</a></li>
               <li class="user-menu-item"><a href="#">Корзина: 0</a></li>
@@ -141,7 +141,7 @@
 
       <div class="populars">
         <section class="popular-goods">
-          <div class="popular-goods-head">
+          <div class="populars-header">
             <h2>Популярные товары:</h2>
             <a class="button" href="">все популярные товары</a>
           </div>
@@ -152,7 +152,7 @@
                   <h3>Перфоратор BOSCH <br> BFG 9000</h3>
                 </a>
                 <a href="">
-                  <p>
+                  <p class="catalog-item-image">
                     <img
                       src="img/perforator-bosch-9000.jpg"
                       width="184"
@@ -164,10 +164,10 @@
                   <a class="button-purchase" href="#">Купить</a>
                   <button class="button-to-bookmarks">В закладки</button>
                 </div>
-                <p>
-                  <span class="catalog-old-price">32500 Р.</span>
+                <div>
+                  <p class="catalog-old-price">32500 Р.</p>
                   <a class="button catalog-price">25500 Р</a>
-                </p>
+                </div>
               </article>
             </li>
             <li class="catalog-item">
@@ -176,7 +176,7 @@
                   <h3>Перфоратор BOSCH <br> BFG 3000</h3>
                 </a>
                 <a href="">
-                  <p>
+                  <p class="catalog-item-image">
                     <img
                       src="img/perforator-bosch-3000.jpg"
                       width="127"
@@ -188,10 +188,10 @@
                   <a class="button-purchase" href="#">Купить</a>
                   <button class="button-to-bookmarks">В закладки</button>
                 </div>
-                <p>
-                  <span class="catalog-old-price">25500 Р</span>
+                <div>
+                  <p class="catalog-old-price">25500 Р</p>
                   <a class="button catalog-price">15500 Р.</a>
-                </p>
+                </div>
               </article>
             </li>
             <li class="catalog-item">
@@ -200,7 +200,7 @@
                   <h3>Перфоратор BOSCH <br> BFG 6000</h3>
                 </a>
                 <a href="">
-                  <p>
+                  <p class="catalog-item-image">
                     <img
                       src="img/perforator-bosch-6000.jpg"
                       width="144"
@@ -212,10 +212,10 @@
                   <a class="button-purchase" href="#">Купить</a>
                   <button class="button-to-bookmarks">В закладки</button>
                 </div>
-                <p>
-                  <span class="catalog-old-price">30500 Р.</span>
+                <div>
+                  <p class="catalog-old-price">30500 Р.</p>
                   <a class="button catalog-price">25500 Р</a>
-                </p>
+                </div>
               </article>
             </li>
             <li class="catalog-item">
@@ -224,7 +224,7 @@
                   <h3>Перфоратор BOSCH <br> BFG 2000</h3>
                 </a>
                 <a href="">
-                  <p>
+                  <p class="catalog-item-image">
                     <img
                       src="img/perforator-bosch-2000.jpg"
                       width="127"
@@ -236,17 +236,19 @@
                   <a class="button-purchase" href="#">Купить</a>
                   <button class="button-to-bookmarks">В закладки</button>
                 </div>
-                <p>
+                <div>
                   <a class="button catalog-price">12500 Р</a>
-                </p>
+                </div>
               </article>
             </li>
           </ul>
         </section>
 
         <section class="popular-producers">
-          <h2>Популярные Производители:</h2>
-          <a class="button" href="">все производители</a>
+          <div class="populars-header">
+            <h2>Популярные Производители:</h2>
+            <a class="button" href="">все производители</a>
+          </div>
           <ul class="popular-producers-list">
             <li class="popular-producers-item">
               <a href="">
@@ -439,7 +441,7 @@
             </ul>
           </div>
 
-          <div class="top-footer-extra-nav">
+          <div class="top-footer-extra-info">
             <div class="footer-contacts">
               <p class="footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
               <a class="footer-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
@@ -473,7 +475,7 @@
               </li>
             </ul>
           </section>
-          <div class="add-info">
+          <div class="footer-add-info">
             <p class="footer-feedback">
               Обратная связь:<br>
               <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
