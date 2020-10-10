@@ -43,10 +43,10 @@
           </div>
           <div class="user-options">
             <div class="user-actions">
-              <a class="user-page" href="#">Равшан Джамшутович</a>
+              <a class="user-page-link" href="#">Равшан Джамшутович</a>
               <a class="logout-link" href="#">Выйти</a>
             </div>
-            <ul class="user-opts">
+            <ul class="user-cabinet">
               <li><a href="">Мои заказы</a></li>
               <li><a href="">Личный кабинет</a></li>
             </ul>
@@ -69,16 +69,16 @@
     <main class="catalog-page">
       <div class="container catalog-page-wrapper">
         <ul class="breadcrumbs">
-          <li>
+          <li class="breadcrumbs-item">
             <a href="catalog.html">Home</a>
           </li>
-          <li>
+          <li class="breadcrumbs-item">
             <a href="catalog.html">Каталог</a>
           </li>
-          <li>
+          <li class="breadcrumbs-item">
             <a href="catalog.html">Инструмент</a>
           </li>
-          <li class="breadcrumbs-current"><a>Перфораторы</a></li>
+          <li class="breadcrumbs-item breadcrumbs-item-current"><a>Перфораторы</a></li>
         </ul>
         <h1 class="catalog-page-title">Перфораторы</h1>
 
@@ -170,11 +170,11 @@
           <ul class="sort-direction-list">
             <li class="sort-direction-option sort-direction-radio">
               <input class="sort-direction-input-radio sort-direction-input" type="radio" name="sort-direction" id="sort-by-increasing" checked>
-              <label for="sort-by-increasing">По возрастанию</label>
+              <label for="sort-by-increasing">Top</label>
             </li>
             <li class="sort-direction-option sort-direction-radio">
               <input class="sort-direction-input-radio sort-direction-input" type="radio" name="sort-direction" id="sort-by-decreasing">
-              <label for="sort-by-decreasing">По убыванию</label>
+              <label for="sort-by-decreasing">Bottom</label>
             </li>
           </ul>
         </section>
@@ -200,10 +200,10 @@
                   <a class="button-purchase" href="#">Купить</a>
                   <button class="button-to-bookmarks">В закладки</button>
                 </div>
-                <p>
+                <div>
                   <span class="catalog-old-price">30500 Р.</span>
                   <a class="button catalog-price">25500 Р</a>
-                </p>
+                </div>
               </article>
             </li>
             <li class="catalog-item">
@@ -224,10 +224,10 @@
                   <a class="button-purchase" href="#">Купить</a>
                   <button class="button-to-bookmarks">В закладки</button>
                 </div>
-                <p>
+                <div>
                   <span class="catalog-old-price">30500 Р.</span>
                   <a class="button catalog-price">25500 Р</a>
-                </p>
+                </div>
               </article>
             </li>
             <li class="catalog-item">
@@ -248,10 +248,10 @@
                   <a class="button-purchase" href="#">Купить</a>
                   <button class="button-to-bookmarks">В закладки</button>
                 </div>
-                <p>
+                <div>
                   <span class="catalog-old-price">30500 Р.</span>
                   <a class="button catalog-price">25500 Р</a>
-                </p>
+                </div>
               </article>
             </li>
             <li class="catalog-item">
@@ -272,10 +272,10 @@
                   <a class="button-purchase" href="#">Купить</a>
                   <button class="button-to-bookmarks">В закладки</button>
                 </div>
-                <p>
+                <div>
                   <span class="catalog-old-price">22500 Р.</span>
                   <a class="button catalog-price">15500 Р</a>
-                </p>
+                </div>
               </article>
             </li>
             <li class="catalog-item">
@@ -296,10 +296,10 @@
                   <a class="button-purchase" href="#">Купить</a>
                   <button class="button-to-bookmarks">В закладки</button>
                 </div>
-                <p>
+                <div>
                   <span class="catalog-old-price">30500 Р.</span>
                   <a class="button catalog-price">25500 Р</a>
-                </p>
+                </div>
               </article>
             </li>
             <li class="catalog-item">
@@ -320,9 +320,9 @@
                   <a class="button-purchase" href="#">Купить</a>
                   <button class="button-to-bookmarks">В закладки</button>
                 </div>
-                <p>
+                <div>
                   <a class="button catalog-price">12500 Р</a>
-                </p>
+                </div>
               </article>
             </li>
             <li class="catalog-item">
@@ -343,10 +343,10 @@
                   <a class="button-purchase" href="#">Купить</a>
                   <button class="button-to-bookmarks">В закладки</button>
                 </div>
-                <p>
+                <div>
                   <span class="catalog-old-price">22500 Р.</span>
                   <a class="button catalog-price">15500 Р</a>
-                </p>
+                </div>
               </article>
             </li>
             <li class="catalog-item">
@@ -367,10 +367,10 @@
                   <a class="button-purchase" href="#">Купить</a>
                   <button class="button-to-bookmarks">В закладки</button>
                 </div>
-                <p>
+                <div>
                   <span class="catalog-old-price">30500 Р.</span>
                   <a class="button catalog-price">25500 Р</a>
-                </p>
+                </div>
               </article>
             </li>
             <li class="catalog-item">
@@ -391,9 +391,9 @@
                   <a class="button-purchase" href="#">Купить</a>
                   <button class="button-to-bookmarks">В закладки</button>
                 </div>
-                <p>
+                <div>
                   <a class="button catalog-price">12500 Р.</a>
-                </p>
+                </div>
               </article>
             </li>
           </ul>
@@ -401,7 +401,7 @@
             <li class="pagination-item pagination-item-current"><a>1</a></li>
             <li class="pagination-item"><a href="#">2</a></li>
             <li class="pagination-item"><a href="#">3</a></li>
-            <li class="pagination-item"><a href="#">Следующая</a></li>
+            <li class="pagination-item pagination-item-next"><a href="#">Следующая</a></li>
           </ul>
         </section>
       </div>
