@@ -143,6 +143,12 @@
   height: auto;
 }
 
+.page-body *,
+.page-body *::before,
+.page-body *::after {
+  box-sizing: border-box;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -173,7 +179,6 @@
   width: 940px;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 0 10px;
   height: 42px;
 }
 
@@ -197,7 +202,7 @@
 
 .top-actions svg {
   position: absolute;
-  left: 10px;
+  left: 17px;
 }
 
 .top-actions a {
@@ -291,9 +296,8 @@
   width: 940px;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 0 10px;
   margin-bottom: 60px;
-  padding-top: 41px;
+  padding-top: 46px;
 }
 
 .bottom-header-text {
@@ -313,7 +317,7 @@
   color: var(--basic-red);
   margin-bottom: 3px;
   position: relative;
-  padding-left: 74px;
+  padding-left: 72px;
   padding-top: 4px;
   display: block;
   box-sizing: border-box;
@@ -339,7 +343,7 @@
   color: var(--basic-blue);
   margin: 0;
   font-size: 14px;
-  padding-left: 10px;
+  padding-left: 11px;
 }
 
 .user-actions {
@@ -348,7 +352,7 @@
   text-align: center;
   color: inherit;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .user-link {
@@ -361,8 +365,8 @@
   height: 45px;
   text-align: center;
   box-sizing: border-box;
-  padding-top: 12px;
-  margin-left: 19px;
+  padding-top: 13px;
+  margin-left: 13px;
 
 }
 
@@ -461,14 +465,12 @@
 .index-title {
   width: 940px;
   margin: 0 auto;
-  padding: 0 10px;
 }
 
 /* Преимущества */
 .benefits {
   width: 940px;
   margin: 59px auto;
-  padding: 0 10px;
 }
 
 .benefits-list {
@@ -549,10 +551,10 @@
 
 .gallery-button-back {
   position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 122px;
-  left: 24px;
+  width: 30px;
+  height: 30px;
+  top: 127px;
+  left: 30px;
   border: none;
   border-top: 3px solid var(--white);
   border-right: 3px solid var(--white);
@@ -563,10 +565,10 @@
 
 .gallery-button-next {
   position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 122px;
-  right: 24px;
+  width: 30px;
+  height: 30px;
+  top: 127px;
+  right: 26px;
   border: none;
   border-top: 3px solid var(--white);
   border-right: 3px solid var(--white);
@@ -601,7 +603,7 @@
 }
 
 .gallery-item h3 {
-  font-weight: 400;
+  font-weight: 700;
   font-size: 36px;
   line-height: 36px;
   text-transform: uppercase;
@@ -653,11 +655,11 @@
 .populars {
   width: 940px;
   margin: 0 auto;
-  padding: 0 10px;
 }
 
 .populars h2 {
   font-size: 30px;
+  font-weight: 400;
   line-height: 30px;
   text-transform: uppercase;
   color: var(--basic-blue);
@@ -899,6 +901,10 @@
   margin-bottom: 70px;
 }
 
+.popular-producers-item {
+  border: 1px solid var(--light-grey-border);
+}
+
 .popular-producers-item a {
   width: 220px;
   height: 145px;
@@ -925,7 +931,6 @@
 .container {
   width: 940px;
   margin: 0 auto;
-  padding: 0 10px;
 }
 
 .services-wrapper {
@@ -962,6 +967,20 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  position: relative;
+  width: 240px;
+}
+
+.services-list-toggles::before {
+  content: "";
+  position: absolute;
+  top: -49px;
+  right: 0;
+  width: 10px;
+  height: 279px;
+  background-image: url("./../img/shadow.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .services-list {
@@ -1069,6 +1088,10 @@
   height: 2px;
   margin-left: -10px;
   background-color: var(--basic-red);
+}
+
+.contacts {
+  padding-bottom: 20px;
 }
 
 .contacts h2 {
@@ -1613,10 +1636,25 @@
 }
 
 /* Форма обратной связи */
-.modal-feedback-form {
+.modal-overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.feedback-form {
   width: 620px;
   position: relative;
+  background-color: var(--white);
 }
+
 
 .feedback-form-top {
   border-top: 7px solid var(--basic-red);
@@ -1695,3 +1733,8 @@
 .modal-close:after {
   transform: rotate(-45deg);
 }
+
+    /* position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
