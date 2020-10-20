@@ -1001,16 +1001,16 @@
   border: 1px solid var(--light-grey-border);
 }
 
+.popular-producers-item:hover {
+  box-shadow: 0px 4px 20px var(--black-transparent-015);
+}
+
 .popular-producers-item a {
   width: 220px;
   height: 143px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.popular-producers-item a:hover {
-  box-shadow: 0px 4px 20px var(--black-transparent-015);
 }
 
 .popular-producers-item a:focus,
