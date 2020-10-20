@@ -804,6 +804,7 @@
   order: -1;
 }
 
+
 .catalog-item:hover {
   box-shadow: 0px 4px 20px var(--black-transparent-015);
 }
@@ -832,18 +833,19 @@
   position: absolute;
   top: -2px;
   right: 0px;
-  width: 94px;
-  height: 98px;
+  width: 92px;
+  height: 97px;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
+  font-weight: 400;
   text-align: center;
   box-sizing: border-box;
-  padding-top: 9px;
+  padding-top: 10px;
   text-transform: uppercase;
   color: white;
   background: linear-gradient(135deg, transparent 20px, var(--basic-red) 0) top left, linear-gradient(225deg, transparent 20px, var(--basic-red) 0) top right;
-  background-size: 50% 30%;
+  background-size: 50% 32%;
   background-repeat: no-repeat;
   transform: rotate(45deg);
 }
@@ -859,6 +861,7 @@
   text-align: center;
   margin: 0;
   margin-bottom: 7px;
+  margin-top: 10px;
 }
 
 .catalog-item-image {
@@ -870,6 +873,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 5px;
+  margin-right: 10px;
 }
 
 .catalog-item-buttons {
@@ -884,8 +889,15 @@
 .catalog-price {
   margin-top: 13px;
   margin-bottom: 21px;
+  margin-left: 14px;
+  text-align: left;
+  padding-left: 31px;
+  padding-top: 8px;
   width: 141px;
   font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
   background:
     linear-gradient(225deg, transparent 15px, var(--basic-red) 0)
     top right,
@@ -893,6 +905,7 @@
     bottom right;
   background-size: 100% 50%;
   background-repeat: no-repeat;
+  border-radius: 3px 0 0 3px;
 }
 
 .catalog-price:hover {
