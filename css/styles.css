@@ -880,6 +880,8 @@
 .catalog-item-buttons {
   width: 184px;
   height: 164px;
+  margin-top: 5px;
+  margin-right: 10px;
 }
 
 .catalog-prices {
