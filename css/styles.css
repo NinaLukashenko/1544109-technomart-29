@@ -71,6 +71,7 @@
   --lighten-background: #f9f5f0;
   --light-background: #f7f3ec;
   --dark-blue-background: #293449;
+  --darker-blue-background: #405069;
   --dark-text: #32425c;
   --grey-border: #e5e5e5;
   --grey-bckground: #f4f4f4;
@@ -197,10 +198,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
 }
 
-.top-actions svg {
+.search-container svg {
   position: absolute;
   left: 17px;
 }
@@ -515,6 +522,7 @@
 .materials {
   background-color: var(--basic-yellow-background);
   position: relative;
+  overflow: hidden;
 }
 
 .materials::before {
@@ -529,6 +537,23 @@
   background-position: 0 0;
 }
 
+.benefits-item-new::after {
+  content: "NEW";
+  position: absolute;
+  top: 8px;
+  right: -28px;
+  width: 105px;
+  height: 30px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--white);
+  background-color: var(--basic-red);
+  transform: rotate(45deg);
+  text-align: center;
+  padding-top: 7px;
+}
+
 .tool {
   background-color: var(--blue-background);
   position: relative;
@@ -537,7 +562,7 @@
 .tool::before {
   content: "";
   position: absolute;
-  top: 32px;
+  top: 33px;
   right: 32px;
   width: 75px;
   height: 61px;
@@ -734,11 +759,16 @@
   display: flex;
   justify-content: space-between;
   height: 89px;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 }
 
 .populars-header .button {
   margin-top: 25px;
+  margin-right: 14px;
+}
+
+.button.button-all-producers {
+  margin-top: 23px;
   margin-right: 19px;
 }
 
@@ -960,7 +990,7 @@
 
 .popular-producers-item a {
   width: 220px;
-  height: 145px;
+  height: 143px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -989,11 +1019,10 @@
 .services-wrapper {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-gap: 70px 20px;
+  grid-gap: 70px 10px;
   box-sizing: border-box;
   padding-top: 64px;
   padding-bottom: 99px;
-
 }
 
 .services-info {
@@ -1004,6 +1033,7 @@
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
+  font-weight: 400;
   margin: 0;
   margin-bottom: 25px;
   padding: 0;
@@ -1049,7 +1079,7 @@
 .services-delivery::after {
   content: "";
   position: absolute;
-  bottom: -128px;
+  bottom: -125px;
   right: 0;
   width: 468px;
   height: 261px;
@@ -1062,6 +1092,7 @@
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
+  font-weight: 400;
   color: var(--basic-blue);
   margin: 0;
   margin-bottom: 30px;
@@ -1075,13 +1106,15 @@
   background-color: var(--basic-blue);
   color: var(--white);
   width: 240px;
-  height: 61px;
+  height: 62px;
   box-sizing: border-box;
   text-align: left;
-  padding-top: 13.5px;
+  padding-top: 0.5px;
   padding-left: 22px;
   border: none;
   outline: none;
+  box-shadow: 0px 1px 0px var(--dark-blue-background),
+    inset 0px 1px 0px var(--darker-blue-background);
 }
 
 .services-button:hover:not(.services-button-active) {
@@ -1091,6 +1124,7 @@
 .services-button-active {
   background-color: var(--white);
   color: var(--basic-blue);
+  box-shadow: 0px 1px 0px var(--white);
 }
 
 /* Компания Техномарт */
@@ -1099,7 +1133,7 @@
   grid-template-columns: 1fr 300px;
   gap: 20px;
   padding-top: 70px;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
 }
 
 .index-columns h2 {
@@ -1115,8 +1149,18 @@
 .about-company h2 {
   margin: 0;
   padding: 0;
+  font-weight: 400;
   margin-bottom: 24px;
   text-transform: uppercase;
+}
+
+.about-company-slogan {
+  margin-top: 24px;
+  margin-bottom: 28px;
+}
+
+.about-company-benefit {
+  margin: 0;
 }
 
 .about-company .button {
@@ -1125,18 +1169,23 @@
 
 .transport-partners-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 37px;
+  margin-bottom: 20px;
 }
 
 .transport-partners-item {
   font-size: 18px;
   position: relative;
+  margin-bottom: 12px;
 }
 
 .transport-partners-item::before {
   position: absolute;
   content: "";
-  top: 10px;
-  left: -30px;
+  top: 12px;
+  left: -27px;
   width: 25px;
   height: 2px;
   margin-left: -10px;
@@ -1152,11 +1201,17 @@
   padding: 0;
   margin-bottom: 24px;
   text-transform: uppercase;
+  font-weight: 400;
+}
+
+.contacts-text {
+  margin-top: 24px;
+  margin-bottom: 32px;
 }
 
 .contacts .button {
   width: 100%;
-  margin-top: 25px;
+  margin-top: 19px;
 }
 
 .map-link {
