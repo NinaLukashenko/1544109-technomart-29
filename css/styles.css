@@ -407,6 +407,12 @@
   opacity: 1;
 }
 
+.cart-link-filled {
+  background-color: var(--basic-red);
+  color: var(--white);
+  padding-right: 22px;
+}
+
 .bookmarks-link {
   position: relative;
   padding: 9px 38px 9px 21px;
@@ -1425,10 +1431,6 @@
 
 /* Страница КАТАЛОГ */
 /* Шапка */
-.cart-not-empty a {
-  background-color: var(--basic-red);
-  color: var(--white);
-}
 
 .user-options {
   display: flex;
@@ -1438,10 +1440,18 @@
 .user-page-link {
   color: inherit;
   background-color: var(--white);
-  width: 240px;
+  width: 245px;
   height: 45px;
   box-sizing: border-box;
   padding-top: 12px;
+  padding-left: 54px;
+  position: relative;
+}
+
+.user-page-link svg {
+  position: absolute;
+  top: 12px;
+  left: 16px;
 }
 
 .user-page-link:focus,
@@ -1449,17 +1459,26 @@
   color: var(--basic-grey);
 }
 
+.user-page-link:hover path {
+  fill: var(--basic-blue);
+}
+
 .logout-link {
   background-color: var(--white);
   color: var(--basic-grey);
-  width: 60px;
+  width: 55px;
   height: 45px;
   box-sizing: border-box;
-  padding-top: 14px;
+  padding-top: 13px;
+  padding-left: 2px;
 }
 
 .logout-link:hover {
-  color: var(--basic-blue);;
+  color: var(--basic-blue);
+}
+
+.logout-link:hover path {
+  fill: var(--basic-blue);
 }
 
 .logout-link:focus,
@@ -1471,11 +1490,23 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-left: 40px;
+  margin-left: 45px;
   display: flex;
   justify-content: space-between;
-  margin-top: 7px;
+  margin-top: 4px;
   width: 210px;
+  position: relative;
+}
+
+.user-cabinet::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 89px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--basic-blue);
 }
 
 .user-cabinet a {
