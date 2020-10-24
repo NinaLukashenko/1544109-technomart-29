@@ -74,7 +74,7 @@
   --darker-blue-background: #405069;
   --dark-text: #32425c;
   --grey-border: #e5e5e5;
-  --grey-bckground: #f4f4f4;
+  --grey-background: #f4f4f4;
   --light-grey-border: #eaeaea;
 
   --white: #ffffff;
@@ -86,12 +86,14 @@
   --basic-dark-grey: #a9a9a9;
   --basic-blue: #32425c;
   --basic-green: #63a63e;
+  --bright-green: #00ca74;
   --white-transparent-3: rgba(255, 255, 255, 0.3);
   --white-transparent-5: rgba(255, 255, 255, 0.5);
   --black-transparent-3: rgba(0, 0, 0, 0.3);
   --basic-grey-transparent-3: rgba(197, 197, 197, 0.3);
   --basic-dark-grey-transparent-3: rgb(169, 169, 169, 0.3);
   --black-transparent-015: rgba(0, 0, 0, 0.15);
+  --black-transparent-024: rgba(0, 0, 0, 0.24);
   --basic-grey-hover-transparent-3: rgba(181, 181, 181, 0.3);
 
   /* Секция Преимущества */
@@ -194,6 +196,7 @@
   box-sizing: border-box;
   padding-top: 12px;
   position: absolute;
+  box-shadow: inset 0px -5px 0px var(--black-transparent-024);
 }
 
 .top-actions {
@@ -1267,7 +1270,7 @@
   box-sizing: border-box;
   padding-top: 21px;
   text-align: center;
-
+  box-shadow: inset 0px -5px 0px var(--black-transparent-024);
 }
 
 .footer-site-navigation {
@@ -1659,6 +1662,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 18px;
+  margin-bottom: 14.15px;
 }
 
 .filter legend {
@@ -1670,17 +1674,109 @@
 
 .filter ul {
   list-style: none;
+  margin: 0;
+  margin-top: 15px;
+  padding: 0;
+  padding-left: 32px;
   font-size: 15px;
   line-height: 19px;
   text-transform: uppercase;
 }
 
+.filter .filter-nutrition-list {
+  margin-top: 24px;
+  padding-left: 33px;
+}
+
+/* PRICE */
+.range-filter {
+  margin-top: 10.85px;
+  border-bottom: 1px solid var(--black-transparent-015);
+  padding-bottom: 25px;
+}
+
+.range-controls {
+  position: relative;
+  height: 80px;
+  margin-bottom: 8px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: var(--light-background);
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: var(--black-transparent-015);
+}
+
+.range-controls .bar {
+  width: 85%;
+  height: 2px;
+  background: var(--bright-green);
+}
+
+.range-controls .toggle {
+  position: absolute;
+  content: "";
+  top: 28px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 8px solid var(--white);
+  background-color: #ababab;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  cursor: pointer;
+}
+
+.range-controls .toggle::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  background-color: var(--basic-grey);
+  border-radius: 50%;
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.price-controls input {
+  width: 95px;
+  padding: 10px;
+  padding-left: 25px;
+  text-align: center;
+  color: #283136;
+  border: none;
+  border-radius: 5px;
+  background: var(--light-background);
+  font-family: inherit;
+  font-size: inherit;
+  font-size: 17px;
+  line-height: 18px;
+}
+
 fieldset.filter-producers {
   border-bottom: 1px solid var(--black-transparent-015);
+  padding-bottom: 12px;
 }
 
 .filter-option {
-  margin-bottom: 19px;
+  margin-bottom: 20px;
   padding-left: 3px;
 }
 
@@ -1698,7 +1794,7 @@ fieldset.filter-producers {
 .filter-input-checkbox + label::before {
   content: "";
   position: absolute;
-  left: -42px;
+  left: -36px;
   top: 0;
   width: 23px;
   height: 23px;
@@ -1710,7 +1806,7 @@ fieldset.filter-producers {
   content: "";
   position: absolute;
   top: 1px;
-  left: -38px;
+  left: -31px;
   width: 21.72px;
   height: 16.76px;
   background-image: url("./../img/check-mark.svg");
@@ -1722,7 +1818,7 @@ fieldset.filter-producers {
 .filter-input-radio + label::before {
   content: "";
   position: absolute;
-  left: -42px;
+  left: -37px;
   top: -1px;
   width: 25px;
   height: 25px;
@@ -1734,7 +1830,7 @@ fieldset.filter-producers {
   content: "";
   position: absolute;
   top: 7px;
-  left: -33px;
+  left: -28px;
   width: 8px;
   height: 8px;
   background-color: var(--basic-grey);
@@ -1756,6 +1852,7 @@ fieldset.filter-producers {
   box-sizing: border-box;
   padding-top: 10px;
   padding-bottom: 10px;
+  margin-top: 20px;
 }
 
 .button-pale:hover {
@@ -1957,6 +2054,56 @@ fieldset.filter-producers {
   margin: 0;
 }
 
+/* Сообщение об удачном добавлении в корзину */
+.success-message {
+  width: 620px;
+  position: relative;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+}
+
+.success-message-top {
+  border-top: 7px solid var(--basic-red);
+}
+
+.success-message-text {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  margin: 0;
+  padding-top: 73px;
+  padding-bottom: 65px;
+}
+
+.success-message-text::before {
+  content: "";
+  position: absolute;
+  top: 55px;
+  left: 70px;
+  width: 66px;
+  height: 66px;
+  background-image: url("./../img/icon-mark.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.success-message-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--grey-background);
+  height: 112px;
+}
+
+.button-pale.continue-purchasing {
+  width: 192px;
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+
 /* Форма обратной связи */
 .modal-overlay {
   width: 100vw;
@@ -2014,7 +2161,7 @@ fieldset.filter-producers {
 }
 
 .feedback-form-bottom {
-  border-color: var(--grey-bckground);
+  border-color: var(--grey-background);
   width: 620px;
   height: 112px;
   display: flex;

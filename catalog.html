@@ -104,31 +104,27 @@
           <form class="filter" method="get" action="https://echo.htmlacademy.ru">
             <fieldset>
               <legend>Цена:</legend>
-              <!-- <div class="price-slider-container">
-                <div class="price-slider-wrapper">
-                  <div class="price-slider">
-                    <div class="price-slider-center">
-                      <div class="price-slider-space"></div>
+                <div class="range-filter">
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar"></div>
                     </div>
-                    <button class="price-slider-button price-slider-button-left">Left</button>
-                    <button class="price-slider-button price-slider-button-right">Right</button>
+                    <div class="toggle toggle-min" tabindex="0"></div>
+                    <div class="toggle toggle-max" tabindex="0"></div>
+                  </div>
+                  <div class="price-controls">
+                    <label class="min-price" aria-label="от">
+                      <input type="number" name="min-price" value="0">
+                    </label>
+                    <label class="max-price" aria-label="до">
+                      <input type="number" name="max-price" value="30000">
+                    </label>
                   </div>
                 </div>
-              </div> -->
-              <ul>
-                <li class="filter-option filter-text">
-                  <input class="filter-input-text filter-input" type="text" name="filter-price-from" id="filter-price-from" placeholder="0" value="0">
-                  <label for="filter-price-from">Цена, от</label>
-                </li>
-                <li class="filter-option filter-text">
-                  <input class="filter-input-text filter-input" type="text" name="filter-price-to" id="filter-price-to" placeholder="30000" value="30000">
-                  <label for="filter-price-to">Цена, до</label>
-                </li>
-              </ul>
             </fieldset>
             <fieldset class="filter-producers">
               <legend>Производители:</legend>
-              <ul>
+              <ul class="filter-producers-list">
                 <li class="filter-option filter-checkbox">
                   <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="bosch" id="filter-bosch" checked>
                   <label for="filter-bosch">Bosch</label>
@@ -153,7 +149,7 @@
             </fieldset>
             <fieldset>
               <legend>Питание:</legend>
-              <ul>
+              <ul class="filter-nutrition-list">
                 <li class="filter-option filter-radio">
                   <input class="visually-hidden filter-input-radio filter-input" type="radio" name="baterry-power" value="battery-charge" id="filter-battery-charge" checked>
                   <label for="filter-battery-charge">Аккумуляторные</label>
@@ -531,6 +527,19 @@
       </div>
 
     </footer>
+
+    <section class="modal-form modal-overlay">
+      <div class="success-message">
+        <div class="success-message-top">
+          <p class="success-message-text">Товар добавлен в корзину!</p>
+        </div>
+        <div class="success-message-bottom">
+          <a class="button">ОФОРМИТЬ ЗАКАЗ</a>
+          <a class="button button-pale continue-purchasing">ПРОДОЛЖИТЬ ПОКУПКИ</a>
+        </div>
+        <button class="modal-close" type="button" aria-label="Закрыть"></button>
+      </div>
+    </section>
 
   </body>
 </html>
