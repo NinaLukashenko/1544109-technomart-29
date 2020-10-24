@@ -126,27 +126,27 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset>
+            <fieldset class="filter-producers">
               <legend>Производители:</legend>
               <ul>
                 <li class="filter-option filter-checkbox">
-                  <input class="filter-input-checkbox filter-input" type="checkbox" name="bosch" id="filter-bosch" checked>
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="bosch" id="filter-bosch" checked>
                   <label for="filter-bosch">Bosch</label>
                 </li>
                 <li class="filter-option filter-checkbox">
-                  <input class="filter-input-checkbox filter-input" type="checkbox" name="interskol" id="filter-interskol">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="interskol" id="filter-interskol">
                   <label for="filter-interskol">Интерскол</label>
                 </li>
                 <li class="filter-option filter-checkbox">
-                  <input class="filter-input-checkbox filter-input" type="checkbox" name="makita" id="filter-makita" checked>
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="makita" id="filter-makita" checked>
                   <label for="filter-makita">Makita</label>
                 </li>
                 <li class="filter-option filter-checkbox">
-                  <input class="filter-input-checkbox filter-input" type="checkbox" name="dewalt" id="filter-dewalt">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="dewalt" id="filter-dewalt">
                   <label for="filter-dewalt">Dewalt</label>
                 </li>
                 <li class="filter-option filter-checkbox">
-                  <input class="filter-input-checkbox filter-input" type="checkbox" name="hitachi" id="filter-hitachi">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="hitachi" id="filter-hitachi">
                   <label for="filter-hitachi">Hitachi</label>
                 </li>
               </ul>
@@ -155,11 +155,11 @@
               <legend>Питание:</legend>
               <ul>
                 <li class="filter-option filter-radio">
-                  <input class="filter-input-radio filter-input" type="radio" name="baterry-power" value="battery-charge" id="filter-battery-charge" checked>
+                  <input class="visually-hidden filter-input-radio filter-input" type="radio" name="baterry-power" value="battery-charge" id="filter-battery-charge" checked>
                   <label for="filter-battery-charge">Аккумуляторные</label>
                 </li>
                 <li class="filter-option filter-radio">
-                  <input class="filter-input-radio filter-input" type="radio" name="baterry-power" value="network-charge" id="filter-network-charge">
+                  <input class="visually-hidden filter-input-radio filter-input" type="radio" name="baterry-power" value="network-charge" id="filter-network-charge">
                   <label for="filter-network-charge">Сетевые</label>
                 </li>
               </ul>
@@ -172,26 +172,26 @@
           <h2 class="sort-title">Сортировка:</h2>
           <ul class="sort-list">
             <li class="sort-option sort-radio">
-              <input class="sort-input-radio sort-input" type="radio" name="sort-type" id="sort-by-price" checked>
+              <input class="visually-hidden sort-input-radio sort-input" type="radio" name="sort-type" id="sort-by-price" checked>
               <label for="sort-by-price">По цене</label>
             </li>
             <li class="sort-option sort-radio">
-              <input class="sort-input-radio sort-input" type="radio" name="sort-type" id="sort-by-type">
+              <input class="visually-hidden sort-input-radio sort-input" type="radio" name="sort-type" id="sort-by-type">
               <label for="sort-by-type">По типу</label>
             </li>
             <li class="sort-option sort-radio">
-              <input class="sort-input-radio sort-input" type="radio" name="sort-type" id="sort-by-functionality">
+              <input class="visually-hidden sort-input-radio sort-input" type="radio" name="sort-type" id="sort-by-functionality">
               <label for="sort-by-functionality">По функционалу</label>
             </li>
           </ul>
           <ul class="sort-direction-list">
             <li class="sort-direction-option sort-direction-radio">
-              <input class="sort-direction-input-radio sort-direction-input" type="radio" name="sort-direction" id="sort-by-increasing" checked>
-              <label for="sort-by-increasing">Top</label>
+              <input class="visually-hidden sort-direction-top sort-direction-input" type="radio" name="sort-direction" id="sort-by-increasing" checked>
+              <label for="sort-by-increasing" aria-label="По возрастанию"></label>
             </li>
             <li class="sort-direction-option sort-direction-radio">
-              <input class="sort-direction-input-radio sort-direction-input" type="radio" name="sort-direction" id="sort-by-decreasing">
-              <label for="sort-by-decreasing">Bottom</label>
+              <input class="visually-hidden sort-direction-bottom sort-direction-input" type="radio" name="sort-direction" id="sort-by-decreasing">
+              <label for="sort-by-decreasing" aria-label="По убыванию"></label>
             </li>
           </ul>
         </section>
