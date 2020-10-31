@@ -858,30 +858,28 @@
   position: relative;
 }
 
-.catalog-item-new .new-product {
-  display: block;
+.catalog-item-new {
+  position: relative;
+  overflow: hidden;
 }
 
-.new-product {
-  display: none;
+.catalog-item-new::before {
+  content: "NEW";
   position: absolute;
-  top: -2px;
-  right: 0px;
-  width: 92px;
-  height: 97px;
-  font-family: "Cuprum", Arial, sans-serif;
+  top: 9px;
+  right: -28px;
+  width: 105px;
+  height: 30px;
   font-size: 14px;
   line-height: 18px;
+  font-family: "Cuprum", Arial, sans-serif;
   font-weight: 400;
-  text-align: center;
-  box-sizing: border-box;
-  padding-top: 10px;
-  text-transform: uppercase;
-  color: white;
-  background: linear-gradient(135deg, transparent 20px, var(--basic-red) 0) top left, linear-gradient(225deg, transparent 20px, var(--basic-red) 0) top right;
-  background-size: 50% 32%;
-  background-repeat: no-repeat;
+  color: var(--white);
+  background-color: var(--basic-red);
   transform: rotate(45deg);
+  text-align: center;
+  padding-top: 7px;
+  z-index: 2;
 }
 
 .catalog-item-title {
@@ -2140,6 +2138,7 @@ fieldset.filter-producers {
   background-color: var(--white);
   display: flex;
   flex-direction: column;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .success-message-top {
@@ -2201,6 +2200,7 @@ fieldset.filter-producers {
   width: 620px;
   position: relative;
   background-color: var(--white);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 
