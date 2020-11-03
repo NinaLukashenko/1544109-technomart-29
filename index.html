@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Техномарт</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body class="page-body">
 
@@ -376,7 +376,7 @@
                 поднимая его на ваш этаж!
               </p>
             </li>
-            <li class="services-item  services-guarantee">
+            <li class="services-item services-guarantee">
               <h3>Гарантия</h3>
               <p>Если купленный у нас товар поломается или заискрит,<br>
                 а также в случае пожара, спровоцированного его<br>
@@ -385,7 +385,7 @@
                 Дом уж восстановите как-нибудь сами.
               </p>
             </li>
-            <li class="services-item services-credit ">
+            <li class="services-item services-credit">
               <h3>Кредит</h3>
               <p>Залезть в долговую яму стало проще!<br>
                 Кредитные консультанты придут вам на помощь.
@@ -544,5 +544,21 @@
       </form>
     </section>
 
+    <section class="modal-form modal-form-map modal-overlay">
+      <div class="map-form">
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <iframe
+          class="modal-map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRltGPLCAxOTExODY!5e0!3m2!1suk!2sua!4v1604438012633!5m2!1suk!2sua"
+          width="943"
+          height="442"
+          allowfullscreen
+          title="Офис компании по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+        </iframe>
+        <button class="modal-close" type="button" aria-label="Закрыть"></button>
+      </div>
+    </section>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>

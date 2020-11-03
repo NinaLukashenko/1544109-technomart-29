@@ -77,6 +77,10 @@
   --basic-green: #63a63e;
   --bright-green: #00ca74;
   --dark-grey: #444444;
+  --dark-blue: #212a3a;
+  --light-black: #283136;
+  --warm-grey: #ababab;
+  --beige: #cfcfcf;
   --white-transparent-3: rgba(255, 255, 255, 0.3);
   --white-transparent-5: rgba(255, 255, 255, 0.5);
   --black-transparent-3: rgba(0, 0, 0, 0.3);
@@ -1437,7 +1441,7 @@
 
 .social-button {
   color: inherit;
-  background: linear-gradient(0deg, #212A3A, #212A3A);
+  background: linear-gradient(0deg, var(--dark-blue), var(--dark-blue));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1784,9 +1788,9 @@
   height: 20px;
   padding: 0;
   border: 8px solid var(--white);
-  background-color: #ababab;
+  background-color: var(--warm-grey);
   border-radius: 50%;
-  box-shadow: 0 2px 1px 0 #cfcfcf;
+  box-shadow: 0 2px 1px 0 var(--beige);
   cursor: pointer;
 }
 
@@ -1833,7 +1837,7 @@
   padding: 10px;
   padding-left: 25px;
   text-align: center;
-  color: #283136;
+  color: var(--light-black);
   border: none;
   border-radius: 5px;
   background: var(--light-background);
@@ -2170,7 +2174,7 @@ fieldset.filter-producers {
   background-color: var(--white);
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 20px var(--black-transparent-015);
 }
 
 .success-message-top {
@@ -2243,7 +2247,7 @@ fieldset.filter-producers {
   width: 620px;
   position: relative;
   background-color: var(--white);
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 20px var(--black-transparent-015);
 }
 
 .feedback-form-top {
@@ -2320,6 +2324,7 @@ fieldset.filter-producers {
   height: 20px;
   background-color: transparent;
   border-color: transparent;
+  cursor: pointer;
 }
 
 .modal-close:before,
@@ -2339,4 +2344,18 @@ fieldset.filter-producers {
 
 .modal-close:after {
   transform: rotate(-45deg);
+}
+
+/* Modal map */
+.map-form {
+  width: 943px;
+  height: 449px;
+  position: relative;
+  background-color: var(--white);
+  border-top: 7px solid var(--basic-red);
+  box-shadow: 0px 4px 20px var(--black-transparent-015);
+}
+
+.modal-map {
+  border: none;
 }
