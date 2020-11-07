@@ -366,6 +366,7 @@
   box-sizing: border-box;
   padding-top: 13px;
   margin-left: 13px;
+  vertical-align: middle;
 }
 
 .user-link:hover {
@@ -406,6 +407,11 @@
   opacity: 1;
 }
 
+.cart-link:focus::before,
+.cart-link:active::before {
+  opacity: 0.3;
+}
+
 .cart-link-filled {
   background-color: var(--basic-red);
   color: var(--white);
@@ -432,6 +438,11 @@
 
 .bookmarks-link:hover::before {
   opacity: 1;
+}
+
+.bookmarks-link:focus::before,
+.bookmarks-link:active::before {
+  opacity: 0.3;
 }
 
 .registration-link {
@@ -705,11 +716,10 @@
   background-color: transparent;
 }
 
-
-
 .benefits-gallery-item {
   grid-column: 1 / 3;
   grid-row: 2 / 4 ;
+  background-color: var(--warm-grey);
 }
 
 .gallery-list {
