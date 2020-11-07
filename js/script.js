@@ -46,6 +46,7 @@ window.addEventListener('keydown', (evt) => {
   }
 })
 
+// СЛАЙДЕР "Преимущества"
 const buttonBack = document.querySelector(".gallery-button-back");
 const buttonNext = document.querySelector(".gallery-button-next");
 const galleryItems = document.querySelectorAll(".gallery-item");
@@ -57,13 +58,20 @@ buttonNext.addEventListener("click", (evt) => {
   galleryItems.forEach((item) => {
     item.classList.remove("gallery-item-active");
   });
-  nextItem = currentItem + 1;
-  if (nextItem === galleryItems.length) {
-    nextItem = currentItem = 0;
+
+  if (currentItem !== galleryItems.length - 1) {
+    galleryItems[currentItem + 1].classList.add("gallery-item-active");
+    currentItem ++;
+    if (currentItem === galleryItems.length - 1) {
+      buttonNext.setAttribute('disabled', 'disabled');
+    }
+    if (currentItem === 1) {
+      buttonBack.removeAttribute('disabled', 'disabled');
+    }
   } else {
-    currentItem = nextItem;
+    galleryItems[currentItem].classList.add("gallery-item-active");
   }
-  galleryItems[nextItem].classList.add("gallery-item-active");
+
 });
 
 buttonBack.addEventListener("click", (evt) => {
@@ -72,23 +80,32 @@ buttonBack.addEventListener("click", (evt) => {
   galleryItems.forEach((item) => {
     item.classList.remove("gallery-item-active");
   });
-  nextItem = currentItem - 1;
-  if (nextItem < 0) {
-    nextItem = currentItem = galleryItems.length - 1;
+
+  if (currentItem !== 0) {
+    galleryItems[currentItem - 1].classList.add("gallery-item-active");
+    currentItem --;
+    // Если пользователь переключился на предпоследний слайд,
+    // делаем снова доступной кнопку "Следующий"
+    if (currentItem === galleryItems.length - 2) {
+      buttonNext.removeAttribute('disabled', 'disabled');
+    }
+    if (currentItem === 0) {
+      buttonBack.setAttribute('disabled', 'disabled');
+    }
   } else {
-    currentItem = nextItem;
+    galleryItems[currentItem].classList.add("gallery-item-active");
   }
-  galleryItems[nextItem].classList.add("gallery-item-active");
+
 });
 
-
-
-
+// СЛАЙДЕР "Сервисы"
 const servicesButtons = document.querySelectorAll('.services-button');
 const servicesGalleryItems = document.querySelectorAll(".services-item");
 
 servicesButtons.forEach(btn => {
   btn.addEventListener("click", (evt)=> {
+    evt.preventDefault();
+
     const activeIndex = evt.target.dataset.position;
 
     // Удаляем класс *active для всех слайдеров
