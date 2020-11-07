@@ -1696,7 +1696,7 @@
   margin-right: 0;
 }
 
-.breadcrumbs-item::after {
+.breadcrumbs-item:not(:last-child)::after {
   content: "";
   position: absolute;
   top: 5px;
@@ -2100,6 +2100,10 @@ fieldset.filter-producers {
   border-bottom: 10px solid var(--basic-grey);
 }
 
+.sort-direction-top:hover + label::before {
+  border-bottom-color: var(--black);
+}
+
 .sort-direction-top:checked + label::before {
   border-bottom-color: var(--basic-red);
 }
@@ -2111,6 +2115,10 @@ fieldset.filter-producers {
   bottom: -10px;
   border: 6px solid transparent;
   border-top: 10px solid var(--basic-grey);
+}
+
+.sort-direction-bottom:hover + label::before {
+  border-top-color: var(--black);
 }
 
 .sort-direction-bottom:checked + label::before {
