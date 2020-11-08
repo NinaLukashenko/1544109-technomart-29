@@ -1380,20 +1380,27 @@
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-between;
-  margin-left: 158px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: 129px;
   margin-top: 37px;
 }
 
-.footer-site-navigation a {
+.footer-site-nav-item a {
   color: inherit;
+  display: block;
+  padding: 0 29.35px;
 }
 
-.footer-site-navigation a:hover {
+.footer-site-nav-item:last-child a {
+  padding-right: 0;
+}
+
+.footer-site-nav-item a:hover {
   text-decoration: underline;
 }
 
-.footer-site-navigation a:focus {
+.footer-site-nav-item a:focus {
   color: var(--basic-light-grey-clicked);
 }
 
@@ -1425,20 +1432,27 @@
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-between;
-  margin-left: 91px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: 62px;
   margin-top: 28px;
 }
 
-.footer-extra-navigation a {
+.footer-extra-nav-item a {
   color: inherit;
+  display: block;
+  padding: 0 29.35px;
 }
 
-.footer-extra-navigation a:hover {
+.footer-extra-nav-item:last-child a {
+  padding-right: 0;
+}
+
+.footer-extra-nav-item a:hover {
   text-decoration: underline;
 }
 
-.footer-extra-navigation a:focus {
+.footer-extra-nav-item a:focus {
   color: var(--basic-yellow-clicked);
 }
 
@@ -2084,6 +2098,12 @@ fieldset.filter-producers {
   border-bottom-style: solid;
 }
 
+.sort-option:focus label,
+.sort-option:active label {
+  border-bottom: none;
+  color: var(--basic-red);
+}
+
 .sort-option input:checked + label {
   border-bottom: none;
   color: var(--basic-red);
@@ -2114,6 +2134,11 @@ fieldset.filter-producers {
   border-bottom-color: var(--black);
 }
 
+.sort-direction-top:focus + label::before,
+.sort-direction-top:active + label::before {
+  border-bottom-color: var(--basic-red);
+}
+
 .sort-direction-top:checked + label::before {
   border-bottom-color: var(--basic-red);
 }
@@ -2129,6 +2154,11 @@ fieldset.filter-producers {
 
 .sort-direction-bottom:hover + label::before {
   border-top-color: var(--black);
+}
+
+.sort-direction-bottom:focus + label::before,
+.sort-direction-bottom:active + label::before {
+  border-top-color: var(--basic-red);
 }
 
 .sort-direction-bottom:checked + label::before {
